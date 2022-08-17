@@ -29,7 +29,9 @@ public class LoginTest extends BaseTest {
 
         //Verify the text ‘Welcome, Please Sign IN!'
         WebElement VerifyTest = driver.findElement(By.xpath("//div[@class='page-title']"));
-        VerifyTest.getText(); // check krva mate
+        String actualTest = VerifyTest.getText(); // check krva mate
+        String expectedTest = "Welcome, Please Sign In!";
+        Assert.assertEquals(expectedTest,actualTest);
         System.out.println("Test Done");
 
     }
